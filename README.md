@@ -21,7 +21,7 @@ To use the source files for each of the labs in this workshop, you have to clone
 ---
 **NOTE**
 
-Board support for the PYNQ-Z1 and PYNQ-Z2 are not included in Vivado 2018.2 by default. The relevant files need to be extracted and saved to:
+Board support for the PYNQ-Z2 are not included in Vivado 2018.2 by default. The relevant files need to be extracted and saved to:
 
  {Vivado installation}\data\boards\board_files\zynq
 
@@ -33,3 +33,30 @@ These files can be downloaded from [/board_files](https://www.xilinx.com/support
 
 
 **PYNQ-Z2**:  Connect the board to the PC using a micro USB cable. Make sure that a jumper is connected to JTAG (between JP1_1 and JP1_2) to use the board in the development mode.  Also, make sure that another jumper is placed between J9_2 and J9_3 to select USB as a power source.
+
+---
+
+## Lab Overviews
+
+### Lab1:
+
+This lab provides a basic introduction to high-level synthesis using the Vivado HLS tool flow. You will use
+Vivado HLS in GUI mode to create a project. You will simulate, synthesize, and implement the provided
+design.
+
+### Lab2:
+
+This lab introduces various techniques and directives which can be used in Vivado HLS to improve
+design performance. The design under consideration accepts an image in a (custom) RGB format,
+converts it to the Y’UV color space, applies a filter to the Y’UV image and converts it back to RGB.
+
+### Lab3:
+
+This lab introduces various techniques and directives which can be used in Vivado HLS to improve
+design performance as well as area and resource utilization. The design under consideration performs
+discrete cosine transformation (DCT) on an 8x8 block of data.
+
+### Lab4:
+
+This lab introduces a design flow to generate a IP-XACT adapter from a design using Vivado HLS and
+using the generated IP-XACT adapter in a processor system using IP Integrator in Vivado.
