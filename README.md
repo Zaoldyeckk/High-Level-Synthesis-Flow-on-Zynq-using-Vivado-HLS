@@ -12,11 +12,11 @@ To use the source files for each of the labs in this workshop, you have to clone
 ---
 #### In the instructions for the labs;
 
-**{sources}** refers to C:\xup\adv_embedded\2018_2_zynq_sources. You can download the source files for the labs from [here](https://www.xilinx.com/support/university/vivado/vivado-workshops/Vivado-adv-embedded-design-zynq.html)
+**{sources}** Lab source files. You can download the source files for the labs from [here](https://www.xilinx.com/support/university/vivado/vivado-workshops/Vivado-high-level-synthesis-flow-zynq.html)
 
-**{labs}** refers to C:\xup\adv_embedded\2018_2_zynq_lab. It assumes that you will create the mentioned directory structure to carry out the labs of this workshop
+**{labs}** The actual Lab contents.
 
-**{labsolutions}** refers to [here](https://www.xilinx.com/support/university/vivado/vivado-workshops/Vivado-adv-embedded-design-zynq.html). This will require you to login into your Xilinx account.
+**{labsolutions}** refers to [here](https://www.xilinx.com/support/university/vivado/vivado-workshops/Vivado-high-level-synthesis-flow-zynq.html). This will require you to login into your Xilinx account.
 
 ---
 **NOTE**
