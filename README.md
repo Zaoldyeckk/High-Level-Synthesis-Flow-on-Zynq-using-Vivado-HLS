@@ -25,7 +25,7 @@ Board support for the PYNQ-Z1 and PYNQ-Z2 are not included in Vivado 2018.2 by d
 
  {Vivado installation}\data\boards\board_files\zynq
 
-These files can be downloaded from [/board_files](https://www.xilinx.com/support/university/vivado/vivado-workshops/Vivado-adv-embedded-design-zynq.html). 
+These files can be downloaded from [/board_files](https://www.xilinx.com/support/documentation/university/vivado/workshops/vivado-adv-embedded-design-zynq/materials/2018x/PYNQZ2/pynq-z2.zip). 
 
 ---
 
