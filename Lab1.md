@@ -1,4 +1,3 @@
-
 # Vivado HLS Design Flow Lab
 
 ## Introduction
