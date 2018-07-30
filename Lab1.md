@@ -343,4 +343,154 @@ not pipelined, it will be latency+1 clock cycles.
     <i>Figure 23. Setting up for Verilog simulation and dump trace</i>
     </p>
 When RTL verification completes the co-simulation report automatically opens showing the Verilog simulation has passed (and the measured latency and interval). In addition, because the Dump Trace option was used and Verilog was selected, two trace files entries can be seen in the Verilog simulation directory.
+    <p align="center">
+    <img src ="./images/lab1/Figure24.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 24. Explorer view after the Verilog RTL co-simulation run</i>
+    </p>
+The Co-simulation report shows the test was passed for Verilog along with latency and Interval
+results.
+    <p align="center">
+    <img src ="./images/lab1/Figure25.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 25. Cosimulation report</i>
+    </p>
+
+#### 7-2. Analyze the dumped traces.
+
+7-2-1. Click on the wave viewer button on tools bar to open the wave viewer.
+
+This will start Vivado 2018.2 and open the wave viewer.
+
+7-2-3. Click on the zoom fit tool button ( ) to see the entire simulation of one iteration.
+
+7-2-4. Select a_address0 in the waveform window, right-click and select **Radix > Unsigned Decimal**.
+Similarly, do the same for b_address0 and res_address0 signals.
+
+7-2-5. Similarly, set the a_q0, b_q0, and res_d0 radix to Signed Decimal.
+
+You should see the output similar to shown below.
+    <p align="center">
+    <img src ="./images/lab1/Figure26.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 26. Full waveform showing iteration worth simulation</i>
+    </p>
+Note that as soon as ap_start is asserted, ap_idle has been de-asserted indicating that the
+design is in computation mode. The ap_idle signal remains de-asserted until ap_done is
+asserted, indicating completion of the process. This indicates 79 clock cycles latency.
+
+7-2-6. Using the Zoom In button, view area of ~160 ns and ~550 ns.
+    <p align="center">
+    <img src ="./images/lab1/Figure27.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 27. Zoomed view</i>
+    </p>
+Observe that the design expects element data by providing a_address0, a_ceo, b_address0,
+b_ceo signals and outputs result using res_d0, res_we0, and res_ce0.
+
+7-2-7. View various part of the simulation and try to understand how the design works.
+
+7-2-8. When done, close Vivado by selecting **File > Exit**. Click **OK** if prompted, and then **Discard** to
+close the program without saving.
+
+### Export RTL and Implement
+
+#### 8-1. In Vivado HLS, export the design, selecting VHDL as a language, and run the implementation by selecting Evaluate option.
+
+8-1-1. In Vivado-HLS, select Solution > Export RTL or click on the button on tools bar to open the dialog box so
+the desired implementation can be run.
+
+An Export RTL Dialog box will open.
+    <p align="center">
+    <img src ="./images/lab1/Figure28.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 28. A Export RTL Dialog box</i>
+    </p>
+
+With default settings (shown above), the IP packaging process will run and create a package for
+the Vivado IP Catalog. Another option available from the Format Selection drop-down menu, is to
+create System Generator for DSP.
+
+8-1-2. Click on the drop-down menu of the **Evaluate Generated RTL** field and select **VHDL**.
+
+8-1-3. Click on the Vivado synthesis, place and route check box to run the implementation tool.
+    <p align="center">
+    <img src ="./images/lab1/Figure29.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 29. Selecting Evaluate options</i>
+    </p>
+8-1-4. Click OK and the implementation run will begin.
+
+You can observe the progress in the Vivado HLS Console window. It goes through several phases:
+
+* Exporting RTL as an IP in the IP-XACT format
+* RTL evaluation, since we selected Evaluate option
+** Goes through Synthesis
+** Goes through Placement and Routing
+    <p align="center">
+    <img src ="./images/lab1/Figure30.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 30. Console view</i>
+    </p>
+When the run is completed the implementation report will be displayed in the information pane.
+    <p align="center">
+    <img src ="./images/lab1/Figure31.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 31. Implementation results in Vivado HLS </i>
+    </p>
+Observe that the timing constraint was met, the achieved period, and the type and amount of resources used.
+    <p align="center">
+    <img src ="./images/lab1/Figure32.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 32. Explorer view after the RTL Export run </i>
+    </p>
+8-1-6. Expand the Verilog and vhdl sub-folders and observe that the Verilog sub-folder only has the rtl
+file whereas the vhdl sub-folder has several files and sub-folders as the synthesis and
+implementation runs were made for it.
+
+It includes project.xpr file (the Vivado project file), matrixmul.xdc file (timing constraint file),
+project.runs folder (which includes synth_1 and impl_1 sub-folders created by the synthesis and
+implementation runs) among others.
+    <p align="center">
+    <img src ="./images/lab1/Figure33.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 33. The implementation directory </i>
+    </p>
+8-1-7. Expand the ip folder and observe the IP packaged as a zip file (xilinx_com_hls_matrixmul_1_0.zip), ready for adding to the Vivado IP catalog.
+    <p align="center">
+    <img src ="./images/lab1/Figure34.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure 34. The ip folder content</i>
+    </p>
+8-1-8. Close Vivado HLS by selecting **File > Exit**.
+
+## Conclusion
+
+In this lab, you completed the major steps of the high-level synthesis design flow using Vivado HLS. You
+created a project, adding source files, synthesized the design, simulated the design, and implemented the
+design. You also learned how to use the Analysis capability to understand the scheduling and binding.
+
+### Answers
+1. Answer the following questions:
+Estimated clock period: 8.70 ns 
+Worst case latency: 79 clock cycles 
+Number of DSP48E used: 1
+Number of FFs used: 44 
+Number of LUTs used: 184 
+
+
+
+
+
 
