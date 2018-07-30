@@ -483,10 +483,15 @@ design. You also learned how to use the Analysis capability to understand the sc
 
 ### Answers
 1. Answer the following questions:
+
 Estimated clock period: 8.70 ns 
+
 Worst case latency: 79 clock cycles 
+
 Number of DSP48E used: 1
+
 Number of FFs used: 44 
+
 Number of LUTs used: 184 
 
 
