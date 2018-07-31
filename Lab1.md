@@ -430,9 +430,7 @@ create System Generator for DSP.
 You can observe the progress in the Vivado HLS Console window. It goes through several phases:
 
 * Exporting RTL as an IP in the IP-XACT format
-* RTL evaluation, since we selected Evaluate option
-** Goes through Synthesis
-** Goes through Placement and Routing
+* RTL evaluation, since we selected Evaluate option 1.Goes through Synthesis 2.Goes through Placement and Routing
     <p align="center">
     <img src ="./images/lab1/Figure30.png" width="60%" height="80%"/>
     </p>
