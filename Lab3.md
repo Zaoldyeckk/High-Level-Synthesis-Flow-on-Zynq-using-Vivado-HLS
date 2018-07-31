@@ -631,7 +631,7 @@ not implement byte-masking on writes).
 
 9-1-10. Close Vivado HLS by selecting File > Exit.
 
-### Conclusion
+## Conclusion
 
 In this lab, you learned various techniques to improve the performance and balance resource utilization.
 PIPELINE directive when applied to outer loop will automatically cause the inner loop to unroll. When a
