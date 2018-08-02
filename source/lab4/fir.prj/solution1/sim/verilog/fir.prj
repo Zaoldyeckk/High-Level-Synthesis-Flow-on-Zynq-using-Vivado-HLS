@@ -1,0 +1,9 @@
+sv work "glbl.v"
+sv xil_defaultlib "fir.autotb.v"
+sv xil_defaultlib "fir.v"
+sv xil_defaultlib "fir_c.v"
+sv xil_defaultlib "fir_mac_muladd_10dEe.v"
+sv xil_defaultlib "fir_mac_muladd_16cud.v"
+sv xil_defaultlib "fir_mul_mul_16s_1bkb.v"
+sv xil_defaultlib "fir_shift_reg.v"
+

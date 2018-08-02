@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Aug  1 15:14:08 2018
+# Process ID: 956
+# Current directory: C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
+# Log file: C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/xsim.log
+# Journal file: C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/fir/xsim_script.tcl
+source fir.tcl

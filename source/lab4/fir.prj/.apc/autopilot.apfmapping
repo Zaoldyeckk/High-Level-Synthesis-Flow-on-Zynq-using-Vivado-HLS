@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.c" path="D:\HLS_2018.2update\HLS\labsource\labs\lab4\fir.c"/>
+    <originFiles name="fir_coef.dat" path="D:\HLS_2018.2update\HLS\labsource\labs\lab4\fir_coef.dat"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="D:\HLS_2018.2update\HLS\labsource\labs\lab4\fir_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

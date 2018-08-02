@@ -1,0 +1,285 @@
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0
+
+C:\xup\hls\labs\lab4\fir.prj\solution1\sim\verilog>set PATH= 
+
+C:\xup\hls\labs\lab4\fir.prj\solution1\sim\verilog>call C:/Xilinx/Vivado/2018.2/bin/xelab xil_defaultlib.apatb_fir_top glbl -prj fir.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s fir  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_fir_top glbl -prj fir.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s fir 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fir_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_c_rom
+INFO: [VRFC 10-311] analyzing module fir_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir_mac_muladd_10dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_10dEe_DSP48_2
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_10dEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir_mac_muladd_16cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_16cud_DSP48_1
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_16cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir_mul_mul_16s_1bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mul_mul_16s_1bkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module fir_mul_mul_16s_1bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir_shift_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_shift_reg_ram
+INFO: [VRFC 10-311] analyzing module fir_shift_reg
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fir_shift_reg_ram
+Compiling module xil_defaultlib.fir_shift_reg(DataWidth=16,Addre...
+Compiling module xil_defaultlib.fir_c_rom
+Compiling module xil_defaultlib.fir_c(DataWidth=16,AddressRange=...
+Compiling module xil_defaultlib.fir_mul_mul_16s_1bkb_DSP48_0
+Compiling module xil_defaultlib.fir_mul_mul_16s_1bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.fir_mac_muladd_16cud_DSP48_1
+Compiling module xil_defaultlib.fir_mac_muladd_16cud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.fir_mac_muladd_10dEe_DSP48_2
+Compiling module xil_defaultlib.fir_mac_muladd_10dEe(ID=1,NUM_ST...
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.apatb_fir_top
+Compiling module work.glbl
+Built simulation snapshot fir
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/xsim.dir/fir/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/xsim.dir/fir/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Aug  1 15:14:07 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Aug  1 15:14:07 2018...
+
+****** xsim v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/fir/xsim_script.tcl
+# xsim {fir} -autoloadwcfg -tclbatch {fir.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fir.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 68 [0.00%] @ "125000"
+// RTL Simulation : 1 / 68 [100.00%] @ "765000"
+// RTL Simulation : 2 / 68 [100.00%] @ "1395000"
+// RTL Simulation : 3 / 68 [100.00%] @ "2025000"
+// RTL Simulation : 4 / 68 [100.00%] @ "2655000"
+// RTL Simulation : 5 / 68 [100.00%] @ "3285000"
+// RTL Simulation : 6 / 68 [100.00%] @ "3915000"
+// RTL Simulation : 7 / 68 [100.00%] @ "4545000"
+// RTL Simulation : 8 / 68 [100.00%] @ "5175000"
+// RTL Simulation : 9 / 68 [100.00%] @ "5805000"
+// RTL Simulation : 10 / 68 [100.00%] @ "6435000"
+// RTL Simulation : 11 / 68 [100.00%] @ "7065000"
+// RTL Simulation : 12 / 68 [100.00%] @ "7695000"
+// RTL Simulation : 13 / 68 [100.00%] @ "8325000"
+// RTL Simulation : 14 / 68 [100.00%] @ "8955000"
+// RTL Simulation : 15 / 68 [100.00%] @ "9585000"
+// RTL Simulation : 16 / 68 [100.00%] @ "10215000"
+// RTL Simulation : 17 / 68 [100.00%] @ "10845000"
+// RTL Simulation : 18 / 68 [100.00%] @ "11475000"
+// RTL Simulation : 19 / 68 [100.00%] @ "12105000"
+// RTL Simulation : 20 / 68 [100.00%] @ "12735000"
+// RTL Simulation : 21 / 68 [100.00%] @ "13365000"
+// RTL Simulation : 22 / 68 [100.00%] @ "13995000"
+// RTL Simulation : 23 / 68 [100.00%] @ "14625000"
+// RTL Simulation : 24 / 68 [100.00%] @ "15255000"
+// RTL Simulation : 25 / 68 [100.00%] @ "15885000"
+// RTL Simulation : 26 / 68 [100.00%] @ "16515000"
+// RTL Simulation : 27 / 68 [100.00%] @ "17145000"
+// RTL Simulation : 28 / 68 [100.00%] @ "17775000"
+// RTL Simulation : 29 / 68 [100.00%] @ "18405000"
+// RTL Simulation : 30 / 68 [100.00%] @ "19035000"
+// RTL Simulation : 31 / 68 [100.00%] @ "19665000"
+// RTL Simulation : 32 / 68 [100.00%] @ "20295000"
+// RTL Simulation : 33 / 68 [100.00%] @ "20925000"
+// RTL Simulation : 34 / 68 [100.00%] @ "21555000"
+// RTL Simulation : 35 / 68 [100.00%] @ "22185000"
+// RTL Simulation : 36 / 68 [100.00%] @ "22815000"
+// RTL Simulation : 37 / 68 [100.00%] @ "23445000"
+// RTL Simulation : 38 / 68 [100.00%] @ "24075000"
+// RTL Simulation : 39 / 68 [100.00%] @ "24705000"
+// RTL Simulation : 40 / 68 [100.00%] @ "25335000"
+// RTL Simulation : 41 / 68 [100.00%] @ "25965000"
+// RTL Simulation : 42 / 68 [100.00%] @ "26595000"
+// RTL Simulation : 43 / 68 [100.00%] @ "27225000"
+// RTL Simulation : 44 / 68 [100.00%] @ "27855000"
+// RTL Simulation : 45 / 68 [100.00%] @ "28485000"
+// RTL Simulation : 46 / 68 [100.00%] @ "29115000"
+// RTL Simulation : 47 / 68 [100.00%] @ "29745000"
+// RTL Simulation : 48 / 68 [100.00%] @ "30375000"
+// RTL Simulation : 49 / 68 [100.00%] @ "31005000"
+// RTL Simulation : 50 / 68 [100.00%] @ "31635000"
+// RTL Simulation : 51 / 68 [100.00%] @ "32265000"
+// RTL Simulation : 52 / 68 [100.00%] @ "32895000"
+// RTL Simulation : 53 / 68 [100.00%] @ "33525000"
+// RTL Simulation : 54 / 68 [100.00%] @ "34155000"
+// RTL Simulation : 55 / 68 [100.00%] @ "34785000"
+// RTL Simulation : 56 / 68 [100.00%] @ "35415000"
+// RTL Simulation : 57 / 68 [100.00%] @ "36045000"
+// RTL Simulation : 58 / 68 [100.00%] @ "36675000"
+// RTL Simulation : 59 / 68 [100.00%] @ "37305000"
+// RTL Simulation : 60 / 68 [100.00%] @ "37935000"
+// RTL Simulation : 61 / 68 [100.00%] @ "38565000"
+// RTL Simulation : 62 / 68 [100.00%] @ "39195000"
+// RTL Simulation : 63 / 68 [100.00%] @ "39825000"
+// RTL Simulation : 64 / 68 [100.00%] @ "40455000"
+// RTL Simulation : 65 / 68 [100.00%] @ "41085000"
+// RTL Simulation : 66 / 68 [100.00%] @ "41715000"
+// RTL Simulation : 67 / 68 [100.00%] @ "42345000"
+// RTL Simulation : 68 / 68 [100.00%] @ "42975000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 43015 ns : File "C:/xup/hls/labs/lab4/fir.prj/solution1/sim/verilog/fir.autotb.v" Line 284
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Aug  1 15:14:16 2018...
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0

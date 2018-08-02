@@ -1,0 +1,297 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter'
+================================================================
+* Date:           Thu Aug  2 20:56:18 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        yuv_filter.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|    10.723|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+----------+--------+----------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min  |    max   |   min  |    max   |   Type  |
+    +--------+----------+--------+----------+---------+
+    |  841205|  51621125|  841205|  51621125|   none  |
+    +--------+----------+--------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+        |                     |      Latency      |  Iteration  |  Initiation Interval  |    Trip    |          |
+        |      Loop Name      |   min  |    max   |   Latency   |  achieved |   target  |    Count   | Pipelined|
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+        |- YUV_SCALE_LOOP_X   |  240400|  14749440| 1202 ~ 7682 |          -|          -| 200 ~ 1920 |    no    |
+        | + YUV_SCALE_LOOP_Y  |    1200|      7680|            6|          -|          -| 200 ~ 1280 |    no    |
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	10  / (exitcond1_i)
+	4  / (!exitcond1_i)
+4 --> 
+	5  / (!exitcond_i)
+	3  / (exitcond_i)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	4  / true
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_yuv_channels_ch1 = alloca [2457600 x i8], align 1" [yuv_filter.c:17]   --->   Operation 11 'alloca' 'p_yuv_channels_ch1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_yuv_channels_ch2 = alloca [2457600 x i8], align 1" [yuv_filter.c:17]   --->   Operation 12 'alloca' 'p_yuv_channels_ch2' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_yuv_channels_ch3 = alloca [2457600 x i8], align 1" [yuv_filter.c:17]   --->   Operation 13 'alloca' 'p_yuv_channels_ch3' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_scale_channels_ch1 = alloca [2457600 x i8], align 1" [yuv_filter.c:18]   --->   Operation 14 'alloca' 'p_scale_channels_ch1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_scale_channels_ch2 = alloca [2457600 x i8], align 1" [yuv_filter.c:18]   --->   Operation 15 'alloca' 'p_scale_channels_ch2' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_scale_channels_ch3 = alloca [2457600 x i8], align 1" [yuv_filter.c:18]   --->   Operation 16 'alloca' 'p_scale_channels_ch3' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%in_width_read = call i16 @_ssdm_op_Read.ap_auto.i16P(i16* %in_width)" [yuv_filter.c:23]   --->   Operation 17 'read' 'in_width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%in_height_read = call i16 @_ssdm_op_Read.ap_auto.i16P(i16* %in_height)" [yuv_filter.c:23]   --->   Operation 18 'read' 'in_height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { i16, i16 } @rgb2yuv([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16 %in_width_read, i16 %in_height_read, [2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3)" [yuv_filter.c:23]   --->   Operation 19 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch1), !map !13"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch2), !map !20"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch3), !map !24"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_width), !map !28"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_height), !map !34"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch1), !map !38"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch2), !map !42"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch3), !map !46"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_width), !map !50"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_height), !map !54"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %Y_scale), !map !58"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %U_scale), !map !64"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %V_scale), !map !68"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @yuv_filter_str) nounwind"   --->   Operation 33 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%V_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %V_scale)"   --->   Operation 34 'read' 'V_scale_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%U_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %U_scale)"   --->   Operation 35 'read' 'U_scale_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%Y_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %Y_scale)"   --->   Operation 36 'read' 'Y_scale_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i16, i16 } @rgb2yuv([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16 %in_width_read, i16 %in_height_read, [2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3)" [yuv_filter.c:23]   --->   Operation 37 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%p_yuv_width = extractvalue { i16, i16 } %call_ret, 0" [yuv_filter.c:23]   --->   Operation 38 'extractvalue' 'p_yuv_width' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%p_yuv_height = extractvalue { i16, i16 } %call_ret, 1" [yuv_filter.c:23]   --->   Operation 39 'extractvalue' 'p_yuv_height' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_i_cast = zext i8 %Y_scale_read to i15" [yuv_filter.c:134->yuv_filter.c:24]   --->   Operation 40 'zext' 'tmp_i_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_1_i_cast = zext i8 %U_scale_read to i15" [yuv_filter.c:135->yuv_filter.c:24]   --->   Operation 41 'zext' 'tmp_1_i_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_2_i_cast = zext i8 %V_scale_read to i15" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 42 'zext' 'tmp_2_i_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.76ns)   --->   "br label %1" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 43 'br' <Predicate = true> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 2.42>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%x_i = phi i16 [ 0, %0 ], [ %x, %5 ]"   --->   Operation 44 'phi' 'x_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (2.42ns)   --->   "%exitcond1_i = icmp eq i16 %x_i, %p_yuv_width" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 45 'icmp' 'exitcond1_i' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (2.07ns)   --->   "%x = add i16 %x_i, 1" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 46 'add' 'x' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %yuv_scale.exit, label %2" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 47 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str5) nounwind" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 48 'specloopname' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_13_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str5)" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 49 'specregionbegin' 'tmp_13_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 200, i32 1920, i32 1060, [1 x i8]* @p_str1) nounwind" [yuv_filter.c:126->yuv_filter.c:24]   --->   Operation 50 'speclooptripcount' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%tmp = trunc i16 %x_i to i13" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 51 'trunc' 'tmp' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%p_shl_cast = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %tmp, i10 0)" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 52 'bitconcatenate' 'p_shl_cast' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i16 %x_i to i15" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 53 'trunc' 'tmp_1' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%p_shl3_cast = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %tmp_1, i8 0)" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 54 'bitconcatenate' 'p_shl3_cast' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (2.28ns)   --->   "%tmp_2 = add i23 %p_shl_cast, %p_shl3_cast" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 55 'add' 'tmp_2' <Predicate = (!exitcond1_i)> <Delay = 2.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (1.76ns)   --->   "br label %3" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 56 'br' <Predicate = (!exitcond1_i)> <Delay = 1.76>
+ST_3 : Operation 57 [2/2] (0.00ns)   --->   "%call_ret1 = call fastcc { i16, i16 } @yuv2rgb([2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i16 %p_yuv_width, i16 %p_yuv_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3)" [yuv_filter.c:25]   --->   Operation 57 'call' 'call_ret1' <Predicate = (exitcond1_i)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 5.53>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%y_i = phi i16 [ 0, %2 ], [ %y, %4 ]"   --->   Operation 58 'phi' 'y_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (2.42ns)   --->   "%exitcond_i = icmp eq i16 %y_i, %p_yuv_height" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 59 'icmp' 'exitcond_i' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 60 [1/1] (2.07ns)   --->   "%y = add i16 %y_i, 1" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 60 'add' 'y' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %5, label %4" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 61 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_5_i_cast = zext i16 %y_i to i23" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 62 'zext' 'tmp_5_i_cast' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (2.28ns)   --->   "%tmp_3 = add i23 %tmp_2, %tmp_5_i_cast" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 63 'add' 'tmp_3' <Predicate = (!exitcond_i)> <Delay = 2.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i23 %tmp_3 to i64" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 64 'zext' 'tmp_3_cast' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%yuv_channels_ch1_add = getelementptr [2457600 x i8]* %p_yuv_channels_ch1, i64 0, i64 %tmp_3_cast" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 65 'getelementptr' 'yuv_channels_ch1_add' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%yuv_channels_ch2_add = getelementptr [2457600 x i8]* %p_yuv_channels_ch2, i64 0, i64 %tmp_3_cast" [yuv_filter.c:131->yuv_filter.c:24]   --->   Operation 66 'getelementptr' 'yuv_channels_ch2_add' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%yuv_channels_ch3_add = getelementptr [2457600 x i8]* %p_yuv_channels_ch3, i64 0, i64 %tmp_3_cast" [yuv_filter.c:132->yuv_filter.c:24]   --->   Operation 67 'getelementptr' 'yuv_channels_ch3_add' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 68 [4/4] (3.25ns)   --->   "%Y = load i8* %yuv_channels_ch1_add, align 1" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 68 'load' 'Y' <Predicate = (!exitcond_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_4 : Operation 69 [4/4] (3.25ns)   --->   "%U = load i8* %yuv_channels_ch2_add, align 1" [yuv_filter.c:131->yuv_filter.c:24]   --->   Operation 69 'load' 'U' <Predicate = (!exitcond_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_4 : Operation 70 [4/4] (3.25ns)   --->   "%V = load i8* %yuv_channels_ch3_add, align 1" [yuv_filter.c:132->yuv_filter.c:24]   --->   Operation 70 'load' 'V' <Predicate = (!exitcond_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str5, i32 %tmp_13_i)" [yuv_filter.c:140->yuv_filter.c:24]   --->   Operation 71 'specregionend' 'empty_15' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "br label %1" [yuv_filter.c:125->yuv_filter.c:24]   --->   Operation 72 'br' <Predicate = (exitcond_i)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 73 [3/4] (3.25ns)   --->   "%Y = load i8* %yuv_channels_ch1_add, align 1" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 73 'load' 'Y' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_5 : Operation 74 [3/4] (3.25ns)   --->   "%U = load i8* %yuv_channels_ch2_add, align 1" [yuv_filter.c:131->yuv_filter.c:24]   --->   Operation 74 'load' 'U' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_5 : Operation 75 [3/4] (3.25ns)   --->   "%V = load i8* %yuv_channels_ch3_add, align 1" [yuv_filter.c:132->yuv_filter.c:24]   --->   Operation 75 'load' 'V' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 76 [2/4] (3.25ns)   --->   "%Y = load i8* %yuv_channels_ch1_add, align 1" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 76 'load' 'Y' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_6 : Operation 77 [2/4] (3.25ns)   --->   "%U = load i8* %yuv_channels_ch2_add, align 1" [yuv_filter.c:131->yuv_filter.c:24]   --->   Operation 77 'load' 'U' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_6 : Operation 78 [2/4] (3.25ns)   --->   "%V = load i8* %yuv_channels_ch3_add, align 1" [yuv_filter.c:132->yuv_filter.c:24]   --->   Operation 78 'load' 'V' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+
+State 7 <SV = 6> <Delay = 7.42>
+ST_7 : Operation 79 [1/4] (3.25ns)   --->   "%Y = load i8* %yuv_channels_ch1_add, align 1" [yuv_filter.c:130->yuv_filter.c:24]   --->   Operation 79 'load' 'Y' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_7 : Operation 80 [1/4] (3.25ns)   --->   "%U = load i8* %yuv_channels_ch2_add, align 1" [yuv_filter.c:131->yuv_filter.c:24]   --->   Operation 80 'load' 'U' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_7 : Operation 81 [1/4] (3.25ns)   --->   "%V = load i8* %yuv_channels_ch3_add, align 1" [yuv_filter.c:132->yuv_filter.c:24]   --->   Operation 81 'load' 'V' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_7 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_6_i_cast = zext i8 %Y to i15" [yuv_filter.c:133->yuv_filter.c:24]   --->   Operation 82 'zext' 'tmp_6_i_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 83 [1/1] (4.17ns)   --->   "%tmp_7_i = mul i15 %tmp_i_cast, %tmp_6_i_cast" [yuv_filter.c:133->yuv_filter.c:24]   --->   Operation 83 'mul' 'tmp_7_i' <Predicate = true> <Delay = 4.17> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_9_i_cast = zext i8 %U to i15" [yuv_filter.c:134->yuv_filter.c:24]   --->   Operation 84 'zext' 'tmp_9_i_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 85 [1/1] (4.17ns)   --->   "%tmp_i = mul i15 %tmp_1_i_cast, %tmp_9_i_cast" [yuv_filter.c:134->yuv_filter.c:24]   --->   Operation 85 'mul' 'tmp_i' <Predicate = true> <Delay = 4.17> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_4_i_cast = zext i8 %V to i15" [yuv_filter.c:135->yuv_filter.c:24]   --->   Operation 86 'zext' 'tmp_4_i_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 87 [1/1] (4.17ns)   --->   "%tmp_8_i = mul i15 %tmp_2_i_cast, %tmp_4_i_cast" [yuv_filter.c:135->yuv_filter.c:24]   --->   Operation 87 'mul' 'tmp_8_i' <Predicate = true> <Delay = 4.17> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_10_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_7_i, i32 7, i32 14)" [yuv_filter.c:136->yuv_filter.c:24]   --->   Operation 88 'partselect' 'tmp_10_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_11_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_i, i32 7, i32 14)" [yuv_filter.c:137->yuv_filter.c:24]   --->   Operation 89 'partselect' 'tmp_11_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_12_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_8_i, i32 7, i32 14)" [yuv_filter.c:138->yuv_filter.c:24]   --->   Operation 90 'partselect' 'tmp_12_i' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 91 [1/1] (0.00ns)   --->   "%scale_channels_ch1_a = getelementptr [2457600 x i8]* %p_scale_channels_ch1, i64 0, i64 %tmp_3_cast" [yuv_filter.c:136->yuv_filter.c:24]   --->   Operation 91 'getelementptr' 'scale_channels_ch1_a' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%scale_channels_ch2_a = getelementptr [2457600 x i8]* %p_scale_channels_ch2, i64 0, i64 %tmp_3_cast" [yuv_filter.c:137->yuv_filter.c:24]   --->   Operation 92 'getelementptr' 'scale_channels_ch2_a' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 93 [1/1] (0.00ns)   --->   "%scale_channels_ch3_a = getelementptr [2457600 x i8]* %p_scale_channels_ch3, i64 0, i64 %tmp_3_cast" [yuv_filter.c:138->yuv_filter.c:24]   --->   Operation 93 'getelementptr' 'scale_channels_ch3_a' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 94 [2/2] (3.25ns)   --->   "store i8 %tmp_10_i, i8* %scale_channels_ch1_a, align 1" [yuv_filter.c:136->yuv_filter.c:24]   --->   Operation 94 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_8 : Operation 95 [2/2] (3.25ns)   --->   "store i8 %tmp_11_i, i8* %scale_channels_ch2_a, align 1" [yuv_filter.c:137->yuv_filter.c:24]   --->   Operation 95 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_8 : Operation 96 [2/2] (3.25ns)   --->   "store i8 %tmp_12_i, i8* %scale_channels_ch3_a, align 1" [yuv_filter.c:138->yuv_filter.c:24]   --->   Operation 96 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str6) nounwind" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 97 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_14_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str6)" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 98 'specregionbegin' 'tmp_14_i' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 200, i32 1280, i32 740, [1 x i8]* @p_str1) nounwind" [yuv_filter.c:129->yuv_filter.c:24]   --->   Operation 99 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 100 [1/2] (3.25ns)   --->   "store i8 %tmp_10_i, i8* %scale_channels_ch1_a, align 1" [yuv_filter.c:136->yuv_filter.c:24]   --->   Operation 100 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_9 : Operation 101 [1/2] (3.25ns)   --->   "store i8 %tmp_11_i, i8* %scale_channels_ch2_a, align 1" [yuv_filter.c:137->yuv_filter.c:24]   --->   Operation 101 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_9 : Operation 102 [1/2] (3.25ns)   --->   "store i8 %tmp_12_i, i8* %scale_channels_ch3_a, align 1" [yuv_filter.c:138->yuv_filter.c:24]   --->   Operation 102 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2457600> <RAM>
+ST_9 : Operation 103 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str6, i32 %tmp_14_i)" [yuv_filter.c:139->yuv_filter.c:24]   --->   Operation 103 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns)   --->   "br label %3" [yuv_filter.c:128->yuv_filter.c:24]   --->   Operation 104 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 3> <Delay = 0.00>
+ST_10 : Operation 105 [1/2] (0.00ns)   --->   "%call_ret1 = call fastcc { i16, i16 } @yuv2rgb([2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i16 %p_yuv_width, i16 %p_yuv_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3)" [yuv_filter.c:25]   --->   Operation 105 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 106 [1/1] (0.00ns)   --->   "%out_width_ret = extractvalue { i16, i16 } %call_ret1, 0" [yuv_filter.c:25]   --->   Operation 106 'extractvalue' 'out_width_ret' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 107 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %out_width, i16 %out_width_ret)" [yuv_filter.c:25]   --->   Operation 107 'write' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 108 [1/1] (0.00ns)   --->   "%out_height_ret = extractvalue { i16, i16 } %call_ret1, 1" [yuv_filter.c:25]   --->   Operation 108 'extractvalue' 'out_height_ret' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 109 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %out_height, i16 %out_height_ret)" [yuv_filter.c:25]   --->   Operation 109 'write' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 110 [1/1] (0.00ns)   --->   "ret void" [yuv_filter.c:26]   --->   Operation 110 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('x') with incoming values : ('x', yuv_filter.c:125->yuv_filter.c:24) [47]  (1.77 ns)
+
+ <State 3>: 2.43ns
+The critical path consists of the following:
+	'phi' operation ('x') with incoming values : ('x', yuv_filter.c:125->yuv_filter.c:24) [47]  (0 ns)
+	'icmp' operation ('exitcond1_i', yuv_filter.c:125->yuv_filter.c:24) [48]  (2.43 ns)
+
+ <State 4>: 5.54ns
+The critical path consists of the following:
+	'phi' operation ('y') with incoming values : ('y', yuv_filter.c:128->yuv_filter.c:24) [62]  (0 ns)
+	'add' operation ('tmp_3', yuv_filter.c:130->yuv_filter.c:24) [71]  (2.28 ns)
+	'getelementptr' operation ('yuv_channels_ch1_add', yuv_filter.c:130->yuv_filter.c:24) [73]  (0 ns)
+	'load' operation ('Y', yuv_filter.c:130->yuv_filter.c:24) on array '_yuv.channels.ch1', yuv_filter.c:17 [79]  (3.25 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('Y', yuv_filter.c:130->yuv_filter.c:24) on array '_yuv.channels.ch1', yuv_filter.c:17 [79]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('Y', yuv_filter.c:130->yuv_filter.c:24) on array '_yuv.channels.ch1', yuv_filter.c:17 [79]  (3.25 ns)
+
+ <State 7>: 7.42ns
+The critical path consists of the following:
+	'load' operation ('Y', yuv_filter.c:130->yuv_filter.c:24) on array '_yuv.channels.ch1', yuv_filter.c:17 [79]  (3.25 ns)
+	'mul' operation ('tmp_7_i', yuv_filter.c:133->yuv_filter.c:24) [83]  (4.17 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('scale_channels_ch1_a', yuv_filter.c:136->yuv_filter.c:24) [76]  (0 ns)
+	'store' operation (yuv_filter.c:136->yuv_filter.c:24) of variable 'tmp_10_i', yuv_filter.c:136->yuv_filter.c:24 on array '_scale.channels.ch1', yuv_filter.c:18 [89]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'store' operation (yuv_filter.c:136->yuv_filter.c:24) of variable 'tmp_10_i', yuv_filter.c:136->yuv_filter.c:24 on array '_scale.channels.ch1', yuv_filter.c:18 [89]  (3.25 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

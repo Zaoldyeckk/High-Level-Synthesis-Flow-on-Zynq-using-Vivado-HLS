@@ -1,0 +1,83 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "fir",
+          "label": "loop",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "fir",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "x",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "fir_io"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "y",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "fir_io"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "return",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "fir_io"
+              }
+            ]
+          }
+        }
+      ]
+    }]}

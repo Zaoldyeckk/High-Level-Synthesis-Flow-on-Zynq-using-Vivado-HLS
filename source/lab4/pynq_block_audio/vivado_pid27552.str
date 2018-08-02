@@ -1,0 +1,282 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 27552
+License: Customer
+
+Current time: 	Wed Aug 01 15:58:42 CST 2018
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 129 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	RIHL
+User home directory: C:/Users/RIHL
+User working directory: D:/HLS_2018.2update/HLS/pynq_block_audio
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/RIHL/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/RIHL/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/RIHL/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/HLS_2018.2update/HLS/pynq_block_audio/vivado.log
+Vivado journal file location: 	D:/HLS_2018.2update/HLS/pynq_block_audio/vivado.jou
+Engine tmp dir: 	D:/HLS_2018.2update/HLS/pynq_block_audio/.Xil/Vivado-27552-RIHL
+
+Xilinx Environment Variables
+----------------------------
+NO_XILINX_DATA_LICENSE: HIDDEN
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	199 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 545 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 56 MB (+56472kb) [00:00:04]
+// [Engine Memory]: 485 MB (+357157kb) [00:00:04]
+// Opening Vivado Project: D:\HLS_2018.2update\HLS\pynq_block_audio\pynq_block_audio.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/HLS_2018.2update/HLS/pynq_block_audio/pynq_block_audio.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 66 MB (+7291kb) [00:00:07]
+// [Engine Memory]: 554 MB (+46312kb) [00:00:07]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 39 MB. Current time: 8/1/18 3:58:45 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 112 MB (+44435kb) [00:00:10]
+// [Engine Memory]: 693 MB (+117078kb) [00:00:10]
+// [GUI Memory]: 126 MB (+9328kb) [00:00:10]
+// Tcl Message: open_project D:/HLS_2018.2update/HLS/pynq_block_audio/pynq_block_audio.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/HLS_2018.2update/HLS/labsource/labs/lab4/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 875.145 ; gain = 131.965 
+// Project name: pynq_block_audio; location: D:/HLS_2018.2update/HLS/pynq_block_audio; part: xc7z020clg400-1
+// [Engine Memory]: 737 MB (+10141kb) [00:00:12]
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 133 MB (+442kb) [00:00:14]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (ck):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {D:/HLS_2018.2update/HLS/pynq_block_audio/pynq_block_audio.srcs/sources_1/bd/design_1/design_1.bd} 
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0 Adding cell -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <design_1> from BD file <D:/HLS_2018.2update/HLS/pynq_block_audio/pynq_block_audio.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 862 MB (+91845kb) [00:00:22]
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.953 ; gain = 113.625 
+// 'bA' command handler elapsed time: 6 seconds
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+dismissDialog("Open Block Design"); // bx (ck)
+// [GUI Memory]: 141 MB (+1177kb) [00:00:23]
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// HMemoryUtils.trashcanNow. Engine heap size: 866 MB. GUI used memory: 110 MB. Current time: 8/1/18 3:59:00 PM CST
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// [GUI Memory]: 150 MB (+2557kb) [00:01:18]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// C (ck): Settings: addNotify
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Packager]", 8, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Repository]", 7, false); // M (C)
+// HMemoryUtils.trashcanNow. Engine heap size: 887 MB. GUI used memory: 122 MB. Current time: 8/1/18 4:00:00 PM CST
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // B (f, C)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [GUI Memory]: 165 MB (+7611kb) [00:01:25]
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // B (f, C)
+// [GUI Memory]: 175 MB (+1976kb) [00:01:27]
+// [Engine Memory]: 911 MB (+6049kb) [00:01:32]
+// Elapsed time: 17 seconds
+setFolderChooser("D:/HLS_2018.2update/HLS/pynq_block_audio/ip_repo");
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  D:/HLS_2018.2update/HLS/pynq_block_audio/ip_repo [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/HLS_2018.2update/HLS/pynq_block_audio/ip_repo'. 
+// c (C): Add Repository: addNotify
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a (c)
+dismissDialog("Add Repository"); // c (C)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+// Tcl Message: update_ip_catalog 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (ck):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {D:/HLS_2018.2update/HLS/pynq_block_audio/pynq_block_audio.srcs/sources_1/bd/design_1/design_1.bd} 
+dismissDialog("Open Block Design"); // bx (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /SDATA_I_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /SDATA_I_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /SDATA_I_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /SDATA_I_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /SDATA_I_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /SDATA_I_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_SDATA_O 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_SDATA_O 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_LRCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_LRCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_BCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_BCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_BCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_BCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 129 MB. Current time: 8/1/18 4:00:30 PM CST
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_LRCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /zed_audio_ctrl_0_LRCLK 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /proc_sys_reset_0_interconnect_aresetn 

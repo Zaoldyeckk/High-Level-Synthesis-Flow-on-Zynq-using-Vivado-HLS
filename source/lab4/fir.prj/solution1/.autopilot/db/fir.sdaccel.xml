@@ -1,0 +1,163 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'fir'" level="0">
+<item name = "Date">Wed Aug  1 15:21:56 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir.prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.702</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">62, 62, 62, 62, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- loop">58, 58, 3, 1, 1, 57, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, 3, -, -</column>
+<column name="Expression">-, -, 0, 30</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, -, 80, 104</column>
+<column name="Memory">0, -, 48, 30</column>
+<column name="Multiplexer">-, -, -, 123</column>
+<column name="Register">-, -, 139, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="fir_fir_io_s_axi_U">fir_fir_io_s_axi, 0, 0, 80, 104</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="fir_mac_muladd_10dEe_U3">fir_mac_muladd_10dEe, i0 * i1 + i2</column>
+<column name="fir_mac_muladd_16cud_U2">fir_mac_muladd_16cud, i0 * i1 + i2</column>
+<column name="fir_mul_mul_16s_1bkb_U1">fir_mul_mul_16s_1bkb, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="c_U">fir_c, 0, 16, 15, 59, 16, 1, 944</column>
+<column name="shift_reg_U">fir_shift_reg, 0, 32, 15, 58, 16, 1, 928</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_1_fu_154_p2">+, 0, 0, 15, 6, 2</column>
+<column name="tmp_3_fu_148_p2">icmp, 0, 0, 11, 6, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="acc1_reg_120">9, 2, 37, 74</column>
+<column name="ap_NS_fsm">33, 6, 1, 6</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
+<column name="ap_phi_mux_i_phi_fu_134_p4">9, 2, 6, 12</column>
+<column name="i_reg_130">9, 2, 6, 12</column>
+<column name="shift_reg_address0">15, 3, 6, 18</column>
+<column name="shift_reg_address1">15, 3, 6, 18</column>
+<column name="shift_reg_d1">15, 3, 16, 48</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="acc1_reg_120">37, 0, 37, 0</column>
+<column name="acc_reg_216">26, 0, 26, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="c_load_reg_261">16, 0, 16, 0</column>
+<column name="i_1_reg_236">6, 0, 6, 0</column>
+<column name="i_reg_130">6, 0, 6, 0</column>
+<column name="shift_reg_load_1_reg_256">16, 0, 16, 0</column>
+<column name="tmp_3_reg_232">1, 0, 1, 0</column>
+<column name="tmp_3_reg_232_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="tmp_6_reg_246">6, 0, 64, 58</column>
+<column name="x_read_reg_221">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_fir_io_AWVALID">in, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_AWREADY">out, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_AWADDR">in, 5, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_WVALID">in, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_WREADY">out, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_WDATA">in, 32, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_WSTRB">in, 4, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_ARVALID">in, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_ARREADY">out, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_ARADDR">in, 5, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_RVALID">out, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_RREADY">in, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_RDATA">out, 32, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_RRESP">out, 2, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_BVALID">out, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_BREADY">in, 1, s_axi, fir_io, scalar</column>
+<column name="s_axi_fir_io_BRESP">out, 2, s_axi, fir_io, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, fir, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, fir, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, fir, return value</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">8.70</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'shift_reg_load', D:/HLS_2018.2update/HLS/labsource/labs/lab4/fir.c:14">load, 2.32, 2.32, -, -, -, -, -, -, &apos;shift_reg&apos;, -, -, -, -</column>
+<column name="'tmp_1_cast', D:/HLS_2018.2update/HLS/labsource/labs/lab4/fir.c:14">sext, 0.00, 2.32, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'acc', D:/HLS_2018.2update/HLS/labsource/labs/lab4/fir.c:14">mul, 6.38, 8.70, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,43 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port BCLK_0 -pg 1 -y -450 -defaultsOSRD
+preplace port IIC_1_0 -pg 1 -y -340 -defaultsOSRD
+preplace port GPIO_0 -pg 1 -y -540 -defaultsOSRD
+preplace port LRCLK_0 -pg 1 -y -430 -defaultsOSRD
+preplace port DDR_0 -pg 1 -y -380 -defaultsOSRD
+preplace port GPIO2_0 -pg 1 -y -520 -defaultsOSRD
+preplace port SDATA_I_0 -pg 1 -y -440 -defaultsOSRD
+preplace port FCLK_CLK1_0 -pg 1 -y -280 -defaultsOSRD
+preplace port SDATA_O_0 -pg 1 -y -410 -defaultsOSRD
+preplace port FIXED_IO_0 -pg 1 -y -360 -defaultsOSRD
+preplace inst zed_audio_ctrl_0 -pg 1 -lvl 2 -y -430 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -y -530 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y -240 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y -290 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y -320 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 3 1 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 4 -10 -430 320J -560 NJ -560 1140
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 3 350 -540 NJ -540 1150
+preplace netloc processing_system7_0_IIC_1 1 3 1 N
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 0 3 -10 -130 NJ -130 720
+preplace netloc SDATA_I_0_1 1 0 2 NJ -440 NJ
+preplace netloc zed_audio_ctrl_0_LRCLK 1 2 2 730J -440 1160J
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 N
+preplace netloc axi_gpio_0_GPIO2 1 1 3 NJ -520 NJ -520 NJ
+preplace netloc axi_gpio_0_GPIO 1 1 3 330J -550 NJ -550 1180J
+preplace netloc axi_interconnect_0_M00_AXI 1 0 2 -10 -450 300
+preplace netloc zed_audio_ctrl_0_SDATA_O 1 2 2 720J -450 1170J
+preplace netloc zed_audio_ctrl_0_BCLK 1 2 2 700J -460 1180J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 -20 -140 340 -140 700
+preplace netloc axi_interconnect_0_M01_AXI 1 1 1 310
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -30 -150 330 -530 710 -470 1130
+preplace netloc processing_system7_0_FCLK_CLK1 1 3 1 N
+levelinfo -pg 1 -50 150 530 930 1200 -top -610 -bot 200
+",
+}
+{
+   da_board_cnt: "1",
+   da_clkrst_cnt: "4",
+}

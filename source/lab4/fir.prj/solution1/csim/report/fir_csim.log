@@ -1,0 +1,85 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) D:/HLS_2018.2update/HLS/labsource/labs/lab4/fir_test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'RIHL' on host 'rihl' (Windows NT_amd64 version 6.2) on Wed Aug 01 14:45:10 +0800 2018
+INFO: [HLS 200-10] In directory 'C:/xup/hls/labs/lab4/fir.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) D:/HLS_2018.2update/HLS/labsource/labs/lab4/fir.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'RIHL' on host 'rihl' (Windows NT_amd64 version 6.2) on Wed Aug 01 14:45:15 +0800 2018
+INFO: [HLS 200-10] In directory 'C:/xup/hls/labs/lab4/fir.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
