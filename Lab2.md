@@ -36,9 +36,9 @@ Note that the source files (yuv_filter.c, yuv_filter_test.c, and image_aux.c) we
 yuv_filter executable program was created, and then it was executed. The program tests the
 design and outputs Test Passed message.
 
-1-1-4. A Vivado HLS tcl script file (yuv_filter.tcl) is provided and can be used to create a Vivado HLS project.
+1-1-4. A Vivado HLS tcl script file (pynq_yuv_filter.tcl) is provided and can be used to create a Vivado HLS project.
 
-1-1-5. Type vivado_hls –f zed_yuv_filter.tcl in the Vivado HLS Command Prompt window to create the project targeting the Pynq.
+1-1-5. Type vivado_hls –f pynq_yuv_filter.tcl in the Vivado HLS Command Prompt window to create the project targeting the Pynq.
 
 The project will be created and Vivado HLS.log file will be generated.
 
