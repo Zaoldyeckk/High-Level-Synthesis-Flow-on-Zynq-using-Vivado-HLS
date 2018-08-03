@@ -116,7 +116,7 @@
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_SIGNAL_CLOCK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_SIGNAL_CLOCK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_SIGNAL_CLOCK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
           </xilinx:configElementInfos>
         </xilinx:componentInstanceExtensions>
       </spirit:vendorExtensions>

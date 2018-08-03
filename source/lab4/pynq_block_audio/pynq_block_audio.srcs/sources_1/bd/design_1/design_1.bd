@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x4A51F24D1B488D47" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xC9D608966315328C" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -14,25 +14,25 @@
     </spirit:parameters>
     <spirit:busInterfaces>
       <spirit:busInterface>
-        <spirit:name>GPIO_0</spirit:name>
+        <spirit:name>GPIO</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="gpio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="gpio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>GPIO2_0</spirit:name>
+        <spirit:name>GPIO2</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="gpio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="gpio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>IIC_1_0</spirit:name>
+        <spirit:name>IIC_1</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="iic" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="iic_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>FIXED_IO_0</spirit:name>
+        <spirit:name>FIXED_IO</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="display_processing_system7" spirit:name="fixedio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="display_processing_system7" spirit:name="fixedio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -49,7 +49,7 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>DDR_0</spirit:name>
+        <spirit:name>DDR</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="ddrx" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="ddrx_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -165,7 +165,7 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>CLK.FCLK_CLK1_0</spirit:name>
+        <spirit:name>CLK.FCLK_CLK1</spirit:name>
         <spirit:displayName>Clk</spirit:displayName>
         <spirit:description>Clock</spirit:description>
         <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -177,7 +177,7 @@
               <spirit:name>CLK</spirit:name>
             </spirit:logicalPort>
             <spirit:physicalPort>
-              <spirit:name>FCLK_CLK1_0</spirit:name>
+              <spirit:name>FCLK_CLK1</spirit:name>
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
@@ -222,31 +222,31 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
-          <spirit:name>BCLK_0</spirit:name>
+          <spirit:name>BCLK</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>LRCLK_0</spirit:name>
+          <spirit:name>LRCLK</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>SDATA_O_0</spirit:name>
+          <spirit:name>SDATA_O</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>FCLK_CLK1_0</spirit:name>
+          <spirit:name>FCLK_CLK1</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>SDATA_I_0</spirit:name>
+          <spirit:name>SDATA_I</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
@@ -335,9 +335,12 @@
         <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO2_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_IS_DUAL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS_2">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USE_BOARD_FLOW">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="GPIO_BOARD_INTERFACE">arduino_a0_a5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="GPIO_BOARD_INTERFACE">Custom</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -363,22 +366,22 @@
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="slowest_sync_clk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="S_AXI_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="S_AXI_ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_0_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="peripheral_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="S_AXI_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="S_AXI_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -393,43 +396,43 @@
       <spirit:adHocConnection>
         <spirit:name>zed_audio_ctrl_0_BCLK</spirit:name>
         <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="BCLK"/>
-        <spirit:externalPortReference spirit:portRef="BCLK_0"/>
+        <spirit:externalPortReference spirit:portRef="BCLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>zed_audio_ctrl_0_LRCLK</spirit:name>
         <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="LRCLK"/>
-        <spirit:externalPortReference spirit:portRef="LRCLK_0"/>
+        <spirit:externalPortReference spirit:portRef="LRCLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>zed_audio_ctrl_0_SDATA_O</spirit:name>
         <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="SDATA_O"/>
-        <spirit:externalPortReference spirit:portRef="SDATA_O_0"/>
+        <spirit:externalPortReference spirit:portRef="SDATA_O"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK1"/>
-        <spirit:externalPortReference spirit:portRef="FCLK_CLK1_0"/>
+        <spirit:externalPortReference spirit:portRef="FCLK_CLK1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>SDATA_I_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="SDATA_I_0"/>
+        <spirit:externalPortReference spirit:portRef="SDATA_I"/>
         <spirit:internalPortReference spirit:componentRef="zed_audio_ctrl_0" spirit:portRef="SDATA_I"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="GPIO_0/axi_gpio_0_GPIO">
+      <spirit:hierConnection spirit:interfaceRef="GPIO/axi_gpio_0_GPIO">
         <spirit:activeInterface spirit:busRef="GPIO" spirit:componentRef="axi_gpio_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="GPIO2_0/axi_gpio_0_GPIO2">
+      <spirit:hierConnection spirit:interfaceRef="GPIO2/axi_gpio_0_GPIO2">
         <spirit:activeInterface spirit:busRef="GPIO2" spirit:componentRef="axi_gpio_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="IIC_1_0/processing_system7_0_IIC_1">
+      <spirit:hierConnection spirit:interfaceRef="IIC_1/processing_system7_0_IIC_1">
         <spirit:activeInterface spirit:busRef="IIC_1" spirit:componentRef="processing_system7_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="FIXED_IO_0/processing_system7_0_FIXED_IO">
+      <spirit:hierConnection spirit:interfaceRef="FIXED_IO/processing_system7_0_FIXED_IO">
         <spirit:activeInterface spirit:busRef="FIXED_IO" spirit:componentRef="processing_system7_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="DDR_0/processing_system7_0_DDR">
+      <spirit:hierConnection spirit:interfaceRef="DDR/processing_system7_0_DDR">
         <spirit:activeInterface spirit:busRef="DDR" spirit:componentRef="processing_system7_0"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
