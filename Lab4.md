@@ -500,3 +500,186 @@ Number of BRAMs used: 0
 Number of FFs used: 167 
 
 Number of LUTs used: 154 
+
+## Appendix
+
+### Create a Project using Vivado GUI
+
+#### 10-1. Launch Vivado and create an empty project targeting the Pynq (xc7z020clg400-1)
+
+10-1-1. Open Vivado by selecting Start > All Programs > Xilinx Design Tools > Vivado 2018.2 >
+Vivado 2018.2
+
+10-1-2. Click **Create New Project** to start the wizard. You will see the Create a New Vivado Project
+dialog box. Click Next.
+
+10-1-3. Click the Browse button of the Project Location field of the New Project form, browse to
+c:\xup\hls\labs\lab4, and click Select.
+
+10-1-4. Enter **audio** in the Project Name field. Make sure that the Create Project Subdirectory box is
+checked. Click Next.
+    <p align="center">
+    <img src ="./images/lab4/FigureA1.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-1. Project Name entry</i>
+    </p>
+10-1-5. Select RTL Project in the Project Type form, and click Next.
+
+10-1-6. Select Verilog as the Target language and Simulator Language in the Add Sources form, and
+click Next.
+    <p align="center">
+    <img src ="./images/lab4/FigureA2.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-2. Add sources to new project</i>
+    </p>
+10-1-7. Click Next two times to skip Adding Existing IP and Add Constraints dialog boxes
+
+10-1-8. In the Default Part form, select Boards, and select Pynq Z1 or Pynq Z2. Click Next.
+    <p align="center">
+    <img src ="./images/lab4/FigureA3.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-3. Boards and Parts selection</i>
+    </p>
+10-1-9. Check the Project Summary and click Finish to create an empty Vivado project.
+
+### Creating the System Using the IP Integrator
+
+#### 11-1. Use the IP Integrator to create a new Block Design, and generate the ARM Cortex-A9 processor based hardware system.
+
+11-1-1. In the Flow Navigator, click Create Block Design under IP Integrator
+    <p align="center">
+    <img src ="./images/lab4/FigureA4.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-4. Create IP Integrator Block Diagram</i>
+    </p>
+
+11-1-2. Enter **system** for the design name and click OK
+
+11-1-3. IP from the catalog can be added in different ways. Click on Add IP in the message at the top of
+the Diagram panel, or click the Add IP icon in the block diagram side bar, press Ctrl + I, or
+right-click anywhere in the Diagram workspace and select Add IP.
+
+11-1-4. Once the IP Catalog is open, type “zy” into the Search bar, find and double click on **ZYNQ7
+Processing System** entry, or click on the entry and hit the Enter key to add it to the design.
+    <p align="center">
+    <img src ="./images/lab4/FigureA5.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-5. The Zynq IP Block</i>
+    </p>
+
+11-1-5. Notice the message at the top of the Diagram window that Designer Assistance available. Click
+on **Run Block Automation** and select /processing_system7_0
+
+11-1-6. Click OK when prompted to run automation.
+    <p align="center">
+    <img src ="./images/lab4/FigureA6.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-6. Zynq Block with DDR and Fixed IO ports</i>
+    </p>  
+
+11-1-7. In the block diagram, double click on the Zynq block to open the Customization window for the
+Zynq processing system.
+
+A block diagram of the Zynq should now be open, showing various configurable blocks of the
+Processing System.
+
+At this stage, the designer can click on various configurable blocks (highlighted in green) and
+change the system configuration.
+
+#### 11-2. Configure I/O Peripherals block to use UART 1 and I2C 1 peripherals, disabling other unwanted peripherals. Uncheck Timer 0. Enable FCLK_CLK1, the PL fabric clock and set its frequency either to 10.000 MHz for the Pynq
+
+11-2-1. Select the MIO Configuration tab on the left to open the configuration form and expand I/O
+Peripheral in the right pane.
+
+11-2-2. Click on the check box of the I2C 1 peripheral. Uncheck USB0, SD 0, ENET 0, GPIO > GPIO
+MIO as we don’t need them.
+
+11-2-3. Expand the Application Processing Unit group in the Select the MIO Configuration tab and
+uncheck the Timer 0.
+
+11-2-4. Select the Clock Configuration in the left pane, expand the PL Fabric Clocks entry in the right,
+and click the check-box of FCLK_CLK1.
+
+11-2-5. Change the Requested Frequency value of FCLK_CLK1 to 10.000 MHz
+    <p align="center">
+    <img src ="./images/lab4/FigureA7.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-7. Enabling and setting the frequency of FCLK_CLK1</i>
+    </p> 
+11-2-6. Click OK.
+Notice that the Zynq block only shows the necessary ports.
+
+#### 11-3. Add the provided I2C-based IP
+
+11-3-1. In the Flow Navigator pane, click Settings under Project Manager.
+    <p align="center">
+    <img src ="./images/lab4/FigureA8.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-8. Invoking Project Settings</i>
+    </p> 
+    
+11-3-2. Expand IP > Repository in the left pane.
+
+11-3-3. Click the + button. Browse to **c:\xup\hls\labs\lab4\ip_repo** and click Select.
+The directory will be scanned and added in the IP Repositories window, and two IP entry will be
+detected.
+
+11-3-4. Click OK to accept the settings.
+
+11-4. Instantiate zed_audio_ctrl and GPIO with width of 2 bits on
+channel 1 and width of 1 bit input only on channel 2.
+
+Run connection automation to connect them.
+
+11-4-1. Click the Add IP button if the IP Catalog is not open and search for AXI GPIO in the catalog
+by typing gpi and double-click on the AXI GPIO entry to add an instance.
+
+11-4-2. Click on the Add IP to Block Design button.
+
+11-4-3. Double-click on the added instance and the Re-Customize IP GUI will be displayed.
+
+11-4-4. Change the Channel 1 width to 2.
+
+11-4-5. Check the Enable Dual Channel box, set the width to 1 input only, and click OK.
+
+11-4-6. Similarly add an instance of the zed_audio_ctrl.
+
+11-4-7. Notice that Design assistance is available. Click on Run Connection Automation, and select
+**/axi_gpio_0/S_AXI**
+
+11-4-8. Click OK to connect it to the M_AXI_GP0 interface.
+Notice two additional blocks, Proc Sys Reset, and AXI Interconnect have automatically been
+added to the design.
+
+11-4-9. Similarly, click on Run Connection Automation, and select /zed_audio_ctrl_0/S_AXI.
+
+#### 11-5. Make IIC_1, GPIO, FCLK_CLK1, and zed_audio_ctrl ports external.
+
+11-5-1. Select the GPIO interface of the axi_gpio_0 instance, right-click on it and select Make External to
+create an external port. This will create the external port named GPIO and connect it to the
+peripheral.
+
+11-5-2. Select the GPIO2 interface of the axi_gpio_0 instance, right-click on it and select Make External
+to create the external port.
+
+11-5-3. Similarly, selecting one port at a time of the zed_audio_ctrl_0 instance, make them external.
+
+11-5-4. Similarly, make the IIC_1 interface and FCLK_CLK1 port of the processing_system7_0 instance
+external.
+
+At this stage the design should look like shown below (you may have to click the regenerate layout button).
+    <p align="center">
+    <img src ="./images/lab4/FigureA9.png" width="60%" height="80%"/>
+    </p>
+    <p align = "center">
+    <i>Figure A-10. Block design after I2C based zed_audio_ctrl core added and connections made for the Pynq</i>
+    </p> 
+
