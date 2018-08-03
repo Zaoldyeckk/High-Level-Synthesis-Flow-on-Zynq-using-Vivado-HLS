@@ -25,7 +25,7 @@ After completing this lab, you will be able to:
 
 1-1-2. In the Vivado HLS Command Prompt, change directory to c:\xup\hls\labs\lab2.
 
-1-1-3. A self-checking program (yuv_filter_test.c) is provided. Using that we can validate the design. A Makefile is also provided. Using the Makefile, the necessary source files can be compiled and the compiled program can be executed. You can examine the contents of these files and the project directory. In the Vivado HLS Command Prompt, type make to compile and execute the program.
+1-1-3. A self-checking program (yuv_filter_test.c) is provided. Using that we can validate the design. A Makefile is also provided. Using the Makefile, the necessary source files can be compiled and the compiled program can be executed. You can examine the contents of these files and the project directory. In the Vivado HLS Command Prompt, type make to compile and execute the program. (You might need to set up the system environment variable for make command)
     <p align="center">
     <img src ="./images/lab2/Figure1.png" width="60%" height="80%"/>
     </p>
