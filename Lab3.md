@@ -30,7 +30,7 @@ After completing this lab, you will be able to:
     <img src ="./images/lab3/Figure1.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 1. Validating the design</i>
+    <i>Validating the design</i>
     </p>
 Note that the source files (dct.c and dct_test.c are compiled, then dct executable program was
 created, and then it was executed. The program tests the design and outputs Results are good
@@ -80,7 +80,7 @@ select xc7z020clg400-1.
     <img src ="./images/lab3/Figure2.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 2. The design under consideration</i>
+    <i>The design under consideration</i>
     </p>
 The top-level function dct, is defined at line 78. It implements 2D DCT algorithm by first
 processing each row of the input array via a 1D DCT then processing the columns of the resulting
@@ -98,7 +98,7 @@ of data on the right-hand side.
     <img src ="./images/lab3/Figure3.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 3. Design hierarchy and dataflow</i>
+    <i>Design hierarchy and dataflow</i>
     </p>
 
 ### Synthesize the Design
@@ -119,7 +119,7 @@ view.
     <img src ="./images/lab3/Figure4.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 4. Inlining of read_data and write_data functions</i>
+    <i>Inlining of read_data and write_data functions</i>
     </p>
 3-1-3. The Synthesis Report shows the performance and resource estimates as well as estimated
 latency in the design. Note that the design is not optimized nor is pipelined.
@@ -127,7 +127,7 @@ latency in the design. Note that the design is not optimized nor is pipelined.
     <img src ="./images/lab3/Figure5.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 5.Synthesis report</i>
+    <i>Synthesis report</i>
     </p> 
 3-1-4. Using scroll bar on the right, scroll down into the report and answer the following question.
 
@@ -150,7 +150,7 @@ Number of LUTs used:
     <img src ="./images/lab3/Figure6.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 6. Generated interface signals</i>
+    <i>Generated interface signals</i>
     </p> 
 You can see ap_clk, ap_rst are automatically added. The ap_start, ap_done, ap_idle, and
 ap_ready are top-level signals used as handshaking signals to indicate when the design is able to
@@ -181,7 +181,7 @@ passed.
     <img src ="./images/lab3/Figure7.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 7. RTL Co-Simulation results</i>
+    <i>RTL Co-Simulation results</i>
     </p>
     
 ### Apply PIPELINE Directive
@@ -213,7 +213,7 @@ follows.
     <img src ="./images/lab3/Figure8.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 8. PIPELINE directive applied</i>
+    <i>PIPELINE directive applied</i>
     </p>
 5-1-9. Click on the **Synthesis** button.
 
@@ -227,7 +227,7 @@ click OK.
     <img src ="./images/lab3/Figure9.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 9. Performance comparison after pipelining</i>
+    <i>Performance comparison after pipelining</i>
     </p>
 5-1-13. Scroll down in the comparison report to view the resources utilization. Observe that the FFs
 and/or LUTs utilization increased whereas BRAM and DSP48E remained same.
@@ -235,7 +235,7 @@ and/or LUTs utilization increased whereas BRAM and DSP48E remained same.
     <img src ="./images/lab3/Figure10.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 10. Resources utilization after pipelining</i>
+    <i>Resources utilization after pipelining</i>
     </p>
 
 #### 5-2. Open the Analysis perspective and determine where most of the clock cycles are spend, i.e. where the large latencies are.
@@ -250,13 +250,13 @@ looking in the Console view message.
     <img src ="./images/lab3/Figure11.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 11. The console view content indicating loops flattening</i>
+    <i>The console view content indicating loops flattening</i>
     </p>
     <p align="center">
     <img src ="./images/lab3/Figure12.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 12. The performance profile at the dct function level</i>
+    <i>The performance profile at the dct function level</i>
     </p>
 
 5-2-3. In the Module Hierarchy tab, expand **dct > dct_2d**. Notice that the most of the latency occurs is
@@ -268,7 +268,7 @@ in dct_2d function.
     <img src ="./images/lab3/Figure13.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 13. The dct_1d function performance profile</i>
+    <i>The dct_1d function performance profile</i>
     </p>
 
 5-2-5. In the Performance Profile tab, select the DCT_Inner_Loop entry, right-click on the node_60
@@ -278,7 +278,7 @@ is highlighted which is preventing the flattening of the DCT_Outer_Loop.
     <img src ="./images/lab3/Figure14.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 14. Understanding what is preventing DCT_Outer_Loop flattening</i>
+    <i>Understanding what is preventing DCT_Outer_Loop flattening</i>
     </p>
 5-2-6. Switch to the Synthesis perspective.
 
@@ -301,7 +301,7 @@ Insert Directive...
     <img src ="./images/lab3/Figure15.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 15. PIPELINE directive applied to DCT_Outer_Loop</i>
+    <i>PIPELINE directive applied to DCT_Outer_Loop</i>
     </p>
 
 By pipelining an outer loop, all inner loops will be unrolled automatically (if legal), so there is no
@@ -322,7 +322,7 @@ click OK.
     <img src ="./images/lab3/Figure16.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 16. Performance comparison after pipelining</i>
+    <i>Performance comparison after pipelining</i>
     </p>
     
 5-3-11. Scroll down in the comparison report to view the resources utilization. Observe that the utilization
@@ -332,7 +332,7 @@ computation requires 8 DSP48E.
     <img src ="./images/lab3/Figure17.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 17. Resources utilization after pipelining</i>
+    <i>Resources utilization after pipelining</i>
     </p>
 5-3-12. Open dct_1d report and observe that the pipeline initiation interval (II) is four (4) cycles, not one
 (1) as might be hoped and there are now 8 BRAMs being used for the coefficient table.
@@ -347,19 +347,19 @@ automatically uses dual-port RAMs, when beneficial to scheduling operations.
     <img src ="./images/lab3/Figure18.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 18. Increased resource utilization of dct_1d</i>
+    <i>Increased resource utilization of dct_1d</i>
     </p>
     <p align="center">
     <img src ="./images/lab3/Figure19.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 19. Automatic partitioning of dct_coeff_table</i>
+    <i> Automatic partitioning of dct_coeff_table</i>
     </p>
     <p align="center">
     <img src ="./images/lab3/Figure20.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 20. Initiation interval of 4</i>
+    <i>Initiation interval of 4</i>
     </p>
 
 #### 5-4. Perform design analysis by switching to the Analysis perspective and looking at the dct_1d performance view.
@@ -373,7 +373,7 @@ pipelined and there is no DCT_Inner_Loop entry.
     <img src ="./images/lab3/Figure21.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 21. DCT_Outer_Loop flattening</i>
+    <i>DCT_Outer_Loop flattening</i>
     </p>
 5-4-3. Select the dct_1d entry in the Module Hierarchy tab and observe that the DCT_Outer_Loop
 spans over eight states in the Performance view.
@@ -381,7 +381,7 @@ spans over eight states in the Performance view.
     <img src ="./images/lab3/Figure22.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 22. The Performance view of the DCT_Outer_Loop function</i>
+    <i>The Performance view of the DCT_Outer_Loop function</i>
     </p>
 
 5-4-4. Switch to the Synthesis perspective.
@@ -408,7 +408,7 @@ function).
     <img src ="./images/lab3/Figure23.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 23. Applying ARRAY_PARTITION directive to memory buffer</i>
+    <i>Applying ARRAY_PARTITION directive to memory buffer</i>
     </p>
 6-1-6. Similarly, apply the ARRAY_PARTITION directive with dimension of 2 to the **col_inbuf** array.
 
@@ -424,7 +424,7 @@ solutions.
     <img src ="./images/lab3/Figure24.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 24. Performance comparison after array partitioning</i>
+    <i>Performance comparison after array partitioning</i>
     </p>
 
 6-1-11. Scroll down in the comparison report to view the resources utilization. Observe the increase in
@@ -433,7 +433,7 @@ the FF resource utilization (almost double).
     <img src ="./images/lab3/Figure25.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 25. Resources utilization after array partitioning</i>
+    <i>Resources utilization after array partitioning</i>
     </p>
 6-1-12. Expand the Loop entry in the **dct.rpt** entry and observe that the Pipeline II is now 1.
 
@@ -450,7 +450,7 @@ the operations are done in addition and comparison.
     <img src ="./images/lab3/Figure26.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 26. Resource profile after partitioning buffers</i>
+    <i>Resource profile after partitioning buffers</i>
     </p>
 
 6-2-4. Switch to the Synthesis perspective.
@@ -478,7 +478,7 @@ the operations are done in addition and comparison.
     <img src ="./images/lab3/Figure27.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 27. Performance estimate after DATAFLOW directive applied</i>
+    <i>Performance estimate after DATAFLOW directive applied</i>
     </p>
 * The Dataflow pipeline throughput indicates the number of clock cycles between each set of
 inputs reads (interval parameter). If this value is less than the design latency it indicates the
@@ -493,7 +493,7 @@ top-level remained at 3.
     <img src ="./images/lab3/Figure28.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 28. Resource estimate with DATAFLOW directive applied</i>
+    <i>Resource estimate with DATAFLOW directive applied</i>
     </p>
 
 7-1-10. Look at the console view and notice that dct_coeff_table is automatically partitioned in dimension
@@ -504,7 +504,7 @@ functions read_data, dct_2d, and write_data.
     <img src ="./images/lab3/Figure29.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 29. Console view of synthesis process after DATAFLOW directive applied</i>
+    <i>Console view of synthesis process after DATAFLOW directive applied</i>
     </p>
 
 #### 7-2. Perform performance analysis by switching to the Analysis perspective and looking at the dct performance profile view.
@@ -523,7 +523,7 @@ parallel as Row_DCT_Loop and Col_DCT_Loop were not pipelined.
     <img src ="./images/lab3/Figure30.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 30. Performance analysis after the DATAFLOW directive</i>
+    <i>Performance analysis after the DATAFLOW directive</i>
     </p>
 
 One of the limitations of the dataflow optimization is that it only works on top-level loops and
@@ -570,7 +570,7 @@ more dataflow processes.
     <img src ="./images/lab3/Figure31.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 31. Console view after INLINE directive applied to dct_2d</i>
+    <i>Console view after INLINE directive applied to dct_2d</i>
     </p>   
 
 8-1-9. Switch to the Analysis perspective, expand the Module Hierarchy entries, and select the dct entry.
@@ -584,7 +584,7 @@ clock cycles.
     <img src ="./images/lab3/Figure32.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 32.  Performance analysis after the INLINE directive</i>
+    <i>Performance analysis after the INLINE directive</i>
     </p> 
 
 8-1-10. Switch to the Synthesis perspective.
@@ -609,7 +609,7 @@ the Directive pane, to ARRAY_RESHAPE with the dimension of 2.
     <img src ="./images/lab3/Figure33.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 33. RESHAPE directive applied</i>
+    <i>RESHAPE directive applied</i>
     </p> 
 
 9-1-6. Click on the Synthesis button.
