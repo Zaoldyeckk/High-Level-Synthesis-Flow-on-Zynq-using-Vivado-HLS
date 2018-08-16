@@ -87,7 +87,7 @@ entries under each sub-folder.
     <img src ="./images/lab4/Figure1.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 1. The design under consideration</i>
+    <i>The design under consideration</i>
     </p>
 The FIR filter expects x as a sample input and pointer to the computed sample out. Both of them
 are defined of data type data_t. The coefficients are loaded in array c of type coef_t from the file
@@ -99,7 +99,7 @@ accumulated value (sample out) is computed in variable acc of type acc_t.
     <img src ="./images/lab4/Figure2.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 2. The header file</i>
+    <i>The header file</i>
     </p>
     
 The header file includes ap_cint.h so user defined data width (of arbitrary precision) can be used.
@@ -128,7 +128,7 @@ csim.exe will then be executed and the output will be displayed in the console v
     <img src ="./images/lab4/Figure3.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 3. Initial part of the generated output in the Console view</i>
+    <i>Initial part of the generated output in the Console view</i>
     </p>
 You should see the filter coefficients being computed.
 
@@ -165,7 +165,7 @@ Number of LUTs used:
     <img src ="./images/lab4/Figure4.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 4. Generated interface signals</i>
+    <i>Generated interface signals</i>
     </p>
 
 You can see the design expects x input as 16-bit scalar and outputs y via pointer of the 16-bit
@@ -218,14 +218,14 @@ that it was successful and the latency reported was 62.
     <img src ="./images/lab4/Figure5.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 5. Selecting the AXI4LiteS adapter and naming bundle</i>
+    <i>Selecting the AXI4LiteS adapter and naming bundle</i>
     </p>
 5-1-7. Similarly, apply the INTERFACE directive (including bundle) to the **y** output.
     <p align="center">
     <img src ="./images/lab4/Figure6.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 6. Applying bundle to assign y output to AXI4Lite adapter</i>
+    <i>Applying bundle to assign y output to AXI4Lite adapter</i>
     </p>
 5-1-8. Apply the INTERFACE directive to the **top-level module fir** to include ap_start, ap_done, and
 ap_idle signals as part of bus adapter (the variable name shown will be return). Include the
@@ -234,7 +234,7 @@ bundle information too.
     <img src ="./images/lab4/Figure7.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 7. Applying bundle to assign function control signals to AXI4Lite adapter</i>
+    <i>Applying bundle to assign function control signals to AXI4Lite adapter</i>
     </p>
 
 Note that the above steps 5-1-3 through 5-1-8 will create address maps for x, y, ap_start ap_valid,
@@ -261,7 +261,7 @@ An Export RTL Dialog box will open.
     <img src ="./images/lab4/Figure8.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 8. Export RTL Dialog</i>
+    <i>Export RTL Dialog</i>
     </p>
 
 6-1-3. Click OK to generate the IP-XACT adapter.
@@ -272,7 +272,7 @@ generated directories; ip, misc, verilog and vhdl.
     <img src ="./images/lab4/Figure9.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 9. IP-XACT adapter generated</i>
+    <i>IP-XACT adapter generated</i>
     </p>
 
 Expand the ip directory and observe several files and sub-directories. One of the sub-directory of
@@ -283,7 +283,7 @@ design
     <img src ="./images/lab4/Figure10.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 10. Adapter’s drivers directory</i>
+    <i>Adapter’s drivers directory</i>
     </p>
 
 6-1-5. Close Vivado HLS by selecting File > Exit.
@@ -302,7 +302,7 @@ design
     <img src ="./images/lab4/Figure11.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 11. Block design made for Pynq</i>
+    <i>Block design made for Pynq</i>
     </p>
 
 #### 7-2. Add the HLS IP to the IP Catalog
@@ -322,7 +322,7 @@ detected.
     <img src ="./images/lab4/Figure12.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 12. Setting path to IP Repositories</i>
+    <i>Setting path to IP Repositories</i>
     </p>
 
 7-2-5. Click OK to accept the settings
@@ -369,7 +369,7 @@ button).
     <img src ="./images/lab4/Figure13.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 13. The complete hardware design</i>
+    <i>The complete hardware design</i>
     </p>
 
 #### 7-5. Verify addresses and validate the design. Generate the system_wrapper file, and add the provided Xilinx Design Constraints (XDC).
@@ -381,7 +381,7 @@ The generated address map should look like as shown below.
     <img src ="./images/lab4/Figure14.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure 14. Generated address map</i>
+    <i>Generated address map</i>
     </p>
 
 7-5-2. Run Design Validation (Tools > **Validate Design**) and verify there are no errors
@@ -522,7 +522,7 @@ checked. Click Next.
     <img src ="./images/lab4/FigureA1.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-1. Project Name entry</i>
+    <i>Project Name entry</i>
     </p>
 10-1-5. Select RTL Project in the Project Type form, and click Next.
 
@@ -532,7 +532,7 @@ click Next.
     <img src ="./images/lab4/FigureA2.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-2. Add sources to new project</i>
+    <i>Add sources to new project</i>
     </p>
 10-1-7. Click Next two times to skip Adding Existing IP and Add Constraints dialog boxes
 
@@ -541,7 +541,7 @@ click Next.
     <img src ="./images/lab4/FigureA3.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-3. Boards and Parts selection</i>
+    <i>Boards and Parts selection</i>
     </p>
 10-1-9. Check the Project Summary and click Finish to create an empty Vivado project.
 
@@ -554,7 +554,7 @@ click Next.
     <img src ="./images/lab4/FigureA4.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-4. Create IP Integrator Block Diagram</i>
+    <i> Create IP Integrator Block Diagram</i>
     </p>
 
 11-1-2. Enter **system** for the design name and click OK
@@ -569,7 +569,7 @@ Processing System** entry, or click on the entry and hit the Enter key to add it
     <img src ="./images/lab4/FigureA5.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-5. The Zynq IP Block</i>
+    <i>The Zynq IP Block</i>
     </p>
 
 11-1-5. Notice the message at the top of the Diagram window that Designer Assistance available. Click
@@ -580,7 +580,7 @@ on **Run Block Automation** and select /processing_system7_0
     <img src ="./images/lab4/FigureA6.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-6. Zynq Block with DDR and Fixed IO ports</i>
+    <i>Zynq Block with DDR and Fixed IO ports</i>
     </p>  
 
 11-1-7. In the block diagram, double click on the Zynq block to open the Customization window for the
@@ -611,7 +611,7 @@ and click the check-box of FCLK_CLK1.
     <img src ="./images/lab4/FigureA7.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-7. Enabling and setting the frequency of FCLK_CLK1</i>
+    <i>Enabling and setting the frequency of FCLK_CLK1</i>
     </p> 
 11-2-6. Click OK.
 Notice that the Zynq block only shows the necessary ports.
@@ -623,7 +623,7 @@ Notice that the Zynq block only shows the necessary ports.
     <img src ="./images/lab4/FigureA8.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-8. Invoking Project Settings</i>
+    <i>Invoking Project Settings</i>
     </p> 
     
 11-3-2. Expand IP > Repository in the left pane.
@@ -680,6 +680,6 @@ At this stage the design should look like shown below (you may have to click the
     <img src ="./images/lab4/FigureA9.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Figure A-10. Block design after I2C based zed_audio_ctrl core added and connections made for the Pynq</i>
+    <i>Block design after I2C based zed_audio_ctrl core added and connections made for the Pynq</i>
     </p> 
 
