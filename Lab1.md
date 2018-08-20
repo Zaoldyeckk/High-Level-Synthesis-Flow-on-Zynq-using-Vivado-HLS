@@ -446,7 +446,7 @@ When the run is completed the implementation report will be displayed in the inf
     </p>
 Observe that the timing constraint was met, the achieved period, and the type and amount of resources used.
     <p align="center">
-    <img src ="./images/lab1/Figure32.png" width="60%" height="80%"/>
+    <img src ="./images/lab1/Figure32.png" width="30%" height="40%"/>
     </p>
     <p align = "center">
     <i>Explorer view after the RTL Export run </i>
