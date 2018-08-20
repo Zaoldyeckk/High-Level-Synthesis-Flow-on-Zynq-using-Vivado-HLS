@@ -224,7 +224,7 @@ click OK.
 
 12. Observe that the latency reduced from 3959 to 1851 clock cycles.
     <p align="center">
-    <img src ="./images/lab3/Figure9.png" width="60%" height="80%"/>
+    <img src ="./images/lab3/Figure9.png" width="30%" height="40%"/>
     </p>
     <p align = "center">
     <i>Performance comparison after pipelining</i>
@@ -232,7 +232,7 @@ click OK.
 13. Scroll down in the comparison report to view the resources utilization. Observe that the FFs
 and/or LUTs utilization increased whereas BRAM and DSP48E remained same.
     <p align="center">
-    <img src ="./images/lab3/Figure10.png" width="60%" height="80%"/>
+    <img src ="./images/lab3/Figure10.png" width="20%" height="33%"/>
     </p>
     <p align = "center">
     <i>Resources utilization after pipelining</i>
