@@ -134,7 +134,7 @@ Number of LUTs used:
 5. Scroll the Console window and note that yuv_scale function is automatically inline into the
 yuv_filter function.
     <p align="center">
-    <img src ="./images/lab2/Figure7.png" width="60%" height="80%"/>
+    <img src ="./images/lab2/Figure7.png" width="99%" height="99%"/>
     </p>
     <p align = "center">
     <i>Vivado HLS automatically inlining function</i>
