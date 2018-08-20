@@ -269,7 +269,7 @@ An Export RTL Dialog box will open.
 4. When the run is completed, expand the **impl** folder in the Explorer view and observe various
 generated directories; ip, misc, verilog and vhdl.
     <p align="center">
-    <img src ="./images/lab4/Figure9.png" width="60%" height="80%"/>
+    <img src ="./images/lab4/Figure9.png" width="30%" height="30%"/>
     </p>
     <p align = "center">
     <i>IP-XACT adapter generated</i>
@@ -299,7 +299,7 @@ design
 
 3. Run the project by double clicking on the pynq_block_audio.xpr in pynq_block_audio folder.
     <p align="center">
-    <img src ="./images/lab4/Figure11.png" width="60%" height="80%"/>
+    <img src ="./images/lab4/Figure11.png" width="99%" height="99%"/>
     </p>
     <p align = "center">
     <i>Block design made for Pynq</i>
@@ -366,7 +366,7 @@ processing_system7_0 instance.
 At this stage the design should look like shown below (you may have to click the regenerate
 button).
     <p align="center">
-    <img src ="./images/lab4/Figure13.png" width="60%" height="80%"/>
+    <img src ="./images/lab4/Figure13.png" width="99%" height="99%"/>
     </p>
     <p align = "center">
     <i>The complete hardware design</i>
@@ -551,7 +551,7 @@ click Next.
 
 1. In the Flow Navigator, click Create Block Design under IP Integrator
     <p align="center">
-    <img src ="./images/lab4/FigureA4.png" width="60%" height="80%"/>
+    <img src ="./images/lab4/FigureA4.png" width="30%" height="40%"/>
     </p>
     <p align = "center">
     <i> Create IP Integrator Block Diagram</i>
@@ -620,7 +620,7 @@ Notice that the Zynq block only shows the necessary ports.
 
 1. In the Flow Navigator pane, click Settings under Project Manager.
     <p align="center">
-    <img src ="./images/lab4/FigureA8.png" width="60%" height="80%"/>
+    <img src ="./images/lab4/FigureA8.png" width="30%" height="40%"/>
     </p>
     <p align = "center">
     <i>Invoking Project Settings</i>
